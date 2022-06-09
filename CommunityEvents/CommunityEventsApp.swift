@@ -16,12 +16,11 @@ struct CommunityEventsApp: App {
         WindowGroup {
             TabView {
                 NavigationView {
-                    
-                    ContentView(network: network, event: events.eventsList.first ?? Event.example);
+                    AboutView()
                 }
                 .tabItem {
                     Image(systemName: "house.fill")
-                    Text("Home")
+                    Text("About")
                 }
                 NavigationView {
                     MapView()
@@ -29,6 +28,13 @@ struct CommunityEventsApp: App {
                 .tabItem {
                     Image(systemName: "mappin.circle.fill")
                     Text("Discover events")
+                }
+                NavigationView {
+                    ContentView(network: network, event: events.eventsList.first ?? Event.example);
+                }
+                .tabItem {
+                    Image(systemName: "info.circle.fill")
+                    Text("Information")
                 }
                 NavigationView {
                     SubmissionsView()

@@ -19,6 +19,9 @@
 		53330C46285228580058025C /* MapView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53330C45285228580058025C /* MapView.swift */; };
 		53330C4828522A2B0058025C /* Events.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53330C4728522A2B0058025C /* Events.swift */; };
 		53330C4C285247AE0058025C /* SubmissionsView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53330C4B285247AE0058025C /* SubmissionsView.swift */; };
+		53330C4E285274EA0058025C /* pin.png in Resources */ = {isa = PBXBuildFile; fileRef = 53330C4D285274E90058025C /* pin.png */; };
+		53330C502852951D0058025C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53330C4F2852951D0058025C /* UIColor.swift */; };
+		53330C5228529F880058025C /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53330C5128529F880058025C /* AboutView.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -54,6 +57,9 @@
 		53330C45285228580058025C /* MapView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MapView.swift; sourceTree = "<group>"; };
 		53330C4728522A2B0058025C /* Events.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Events.swift; sourceTree = "<group>"; };
 		53330C4B285247AE0058025C /* SubmissionsView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionsView.swift; sourceTree = "<group>"; };
+		53330C4D285274E90058025C /* pin.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = pin.png; sourceTree = "<group>"; };
+		53330C4F2852951D0058025C /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
+		53330C5128529F880058025C /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -105,6 +111,7 @@
 			isa = PBXGroup;
 			children = (
 				53330C1728520BEF0058025C /* CommunityEventsApp.swift */,
+				53330C5128529F880058025C /* AboutView.swift */,
 				53330C1928520BEF0058025C /* ContentView.swift */,
 				53330C45285228580058025C /* MapView.swift */,
 				53330C4328520E880058025C /* Event.swift */,
@@ -112,6 +119,8 @@
 				53330C4128520E510058025C /* Network.swift */,
 				53330C4B285247AE0058025C /* SubmissionsView.swift */,
 				53330C1B28520BF00058025C /* Assets.xcassets */,
+				53330C4D285274E90058025C /* pin.png */,
+				53330C4F2852951D0058025C /* UIColor.swift */,
 				53330C1D28520BF00058025C /* Preview Content */,
 			);
 			path = CommunityEvents;
@@ -246,6 +255,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				53330C4E285274EA0058025C /* pin.png in Resources */,
 				53330C1F28520BF00058025C /* Preview Assets.xcassets in Resources */,
 				53330C1C28520BF00058025C /* Assets.xcassets in Resources */,
 			);
@@ -277,7 +287,9 @@
 				53330C4C285247AE0058025C /* SubmissionsView.swift in Sources */,
 				53330C1A28520BEF0058025C /* ContentView.swift in Sources */,
 				53330C46285228580058025C /* MapView.swift in Sources */,
+				53330C502852951D0058025C /* UIColor.swift in Sources */,
 				53330C1828520BEF0058025C /* CommunityEventsApp.swift in Sources */,
+				53330C5228529F880058025C /* AboutView.swift in Sources */,
 				53330C4228520E510058025C /* Network.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;

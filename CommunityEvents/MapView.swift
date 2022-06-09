@@ -12,7 +12,7 @@ struct MapView: View {
     @EnvironmentObject var events: Events
     @State var region = MKCoordinateRegion(
         center: CLLocationCoordinate2D(latitude: 53.483959, longitude: -2.244644),
-        span: MKCoordinateSpan(latitudeDelta: 0.5, longitudeDelta: 0.5))
+        span: MKCoordinateSpan(latitudeDelta: 0.2, longitudeDelta: 0.2))
     
     var body: some View {
         Map(coordinateRegion: $region,
@@ -25,6 +25,6 @@ struct MapView: View {
                     }
                 }
         }
-            .navigationTitle("Events")
+            .navigationTitle("Events Near You")
     }
 }

@@ -16,7 +16,7 @@ struct Event: Decodable, Identifiable {
     let longitude: Double
     let price: Double
     let description: String
-    let link: String
+    let link: String?
     let imageUrl: String
     
     static let example = Event(id: "629f3ec51c11eb1825ef27e5",
