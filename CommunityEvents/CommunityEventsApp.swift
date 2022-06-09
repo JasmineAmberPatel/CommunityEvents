@@ -9,9 +9,10 @@ import SwiftUI
 
 @main
 struct CommunityEventsApp: App {
+    var network = Network()
     var body: some Scene {
         WindowGroup {
-            ContentView()
+            ContentView(network: network.self)
         }
     }
 }

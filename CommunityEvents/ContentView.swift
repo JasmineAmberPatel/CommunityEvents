@@ -8,14 +8,24 @@
 import SwiftUI
 
 struct ContentView: View {
+    var network: Network
+    
     var body: some View {
-        Text("Hello, world!")
-            .padding()
+        Text("Hello world")
+            .onAppear {
+                Task {
+                    do {
+                        try await network.getEvents()
+                    } catch {
+                        print("Error", error)
+                    }
+                }
+            }
     }
 }
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView()
+        ContentView(network: Network())
     }
 }
