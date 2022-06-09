@@ -6,18 +6,18 @@
 //
 import SwiftUI
 
-struct Event: Decodable {
+struct Event: Decodable, Identifiable {
     let id: String
     let title: String
     let date: String
     let time: String
     let location: String
-    let latitude: Decimal
-    let longitude: Decimal
-    let price: Decimal
+    let latitude: Double
+    let longitude: Double
+    let price: Double
     let description: String
-    let link: String?
-    let imageUrl: String?
+    let link: String
+    let imageUrl: String
     
     static let example = Event(id: "629f3ec51c11eb1825ef27e5",
                                title: "Visit Santa's House",
