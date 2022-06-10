@@ -9,10 +9,12 @@ import SwiftUI
 
 class ContentViewModel: ObservableObject {
     
-    var eventsList: [Event] = []
+    var eventsList: [Event]
+    var primary: Event
     
-    var primary: Event {
-        eventsList[0]
+    init() {
+        self.eventsList = []
+        self.primary = eventsList[0]
     }
     
     func getEvents() async throws {
@@ -24,4 +26,5 @@ class ContentViewModel: ObservableObject {
         eventsList = try JSONDecoder().decode([Event].self, from:data)
         print("Async decodedEvent", eventsList)
     }
+    
 }

@@ -9,8 +9,8 @@ import SwiftUI
 
 @main
 struct CommunityEventsApp: App {
-    @StateObject var events = ContentViewModel()
-    var viewModel: ContentViewModel
+    @StateObject var viewModel: ContentViewModel
+    var event: Event
     
     var body: some Scene {
         WindowGroup {
@@ -30,7 +30,7 @@ struct CommunityEventsApp: App {
                     Text("Discover events")
                 }
                 NavigationView {
-                    ContentView(event: events.primary, viewModel: viewModel);
+                    ContentView(event: event, viewModel: viewModel);
                 }
                 .tabItem {
                     Image(systemName: "info.circle.fill")
@@ -44,7 +44,7 @@ struct CommunityEventsApp: App {
                     Text("Submit")
                 }
             }
-            .environmentObject(events)
+            .environmentObject(viewModel)
         }
     }
 }

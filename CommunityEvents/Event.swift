@@ -20,6 +20,30 @@ struct Event: Decodable, Identifiable {
     let link: String?
     let imageUrl: String
     
+    init(id: String,
+         title: String,
+         date: String,
+         time: String,
+         location: String,
+         latitude: Double,
+         longitude: Double,
+         price: Double,
+         description: String,
+         link: String,
+         imageUrl: String) {
+        self.id = id
+        self.title = title
+        self.date = date
+        self.time = time
+        self.location = location
+        self.latitude = latitude
+        self.longitude = longitude
+        self.price = price
+        self.description = description
+        self.link = link
+        self.imageUrl = imageUrl
+    }
+    
     static let example = Event(id: "629f3ec51c11eb1825ef27e5",
                                title: "Visit Santa's House",
                                date: "25/12/22",
