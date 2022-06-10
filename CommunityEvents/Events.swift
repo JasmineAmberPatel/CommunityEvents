@@ -10,6 +10,10 @@ import SwiftUI
 class Events: ObservableObject {
     var eventsList: [Event]
     
+    var primary: Event {
+        eventsList[0]
+    }
+    
     init(eventsList: [Event]) {
         self.eventsList = eventsList
     }

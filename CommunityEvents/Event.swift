@@ -7,6 +7,7 @@
 import SwiftUI
 
 struct Event: Decodable, Identifiable {
+    
     let id: String
     let title: String
     let date: String

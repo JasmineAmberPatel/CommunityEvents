@@ -8,8 +8,8 @@
 import SwiftUI
 
 struct ContentView: View {
-    let network: Network
     let event: Event
+    let viewModel: ContentViewModel
     
     var body: some View {
         ScrollView {
@@ -17,7 +17,7 @@ struct ContentView: View {
                 AsyncImage(url: URL(string: event.imageUrl)) { image in
                     image.resizable()
                 } placeholder: {
-                    Color.red
+                    Color.ceOrange
                 }
                 .frame(width: 340, height: 200)
                 .clipShape(RoundedRectangle(cornerRadius: 25))
@@ -57,7 +57,7 @@ struct ContentView: View {
                 .onAppear {
                     Task {
                         do {
-                            try await network.getEvents()
+                            try await viewModel.getEvents()
                         } catch {
                             print("Error", error)
                         }
@@ -71,6 +71,6 @@ struct ContentView: View {
 
 struct ContentView_Previews: PreviewProvider {
     static var previews: some View {
-        ContentView(network: Network(), event: Event.example)
+        ContentView(event: Event.example, viewModel: ContentViewModel())
     }
 }

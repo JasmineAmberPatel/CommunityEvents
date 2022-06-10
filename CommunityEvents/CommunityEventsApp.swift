@@ -9,8 +9,8 @@ import SwiftUI
 
 @main
 struct CommunityEventsApp: App {
-    @StateObject var events = Events(eventsList: [])
-    var network = Network()
+    @StateObject var events = ContentViewModel()
+    var viewModel: ContentViewModel
     
     var body: some Scene {
         WindowGroup {
@@ -30,7 +30,7 @@ struct CommunityEventsApp: App {
                     Text("Discover events")
                 }
                 NavigationView {
-                    ContentView(network: network, event: events.eventsList.first ?? Event.example);
+                    ContentView(event: events.primary, viewModel: viewModel);
                 }
                 .tabItem {
                     Image(systemName: "info.circle.fill")
