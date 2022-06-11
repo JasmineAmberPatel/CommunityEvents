@@ -8,9 +8,20 @@
 import SwiftUI
 
 struct AboutView: View {
+    let viewModel: ContentViewModel
+    
     var body: some View {
         VStack {
             Text("Hello, World!")
+        }
+        .onAppear {
+            Task {
+                do {
+                    try await viewModel.getEvents()
+                } catch {
+                    print("Error", error)
+                }
+            }
         }
         .navigationTitle("About Us")
     }
@@ -18,6 +29,6 @@ struct AboutView: View {
 
 struct About_Previews: PreviewProvider {
     static var previews: some View {
-        AboutView()
+        AboutView(viewModel: ContentViewModel())
     }
 }

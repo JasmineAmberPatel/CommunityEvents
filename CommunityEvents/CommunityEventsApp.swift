@@ -21,8 +21,9 @@ struct CommunityEventsApp: App {
         WindowGroup {
             TabView {
                 NavigationView {
-                    AboutView()
+                    AboutView(viewModel: viewModel)
                 }
+                .navigationViewStyle(.stack)
                 .tabItem {
                     Image(systemName: "house.fill")
                     Text("About")
@@ -30,6 +31,7 @@ struct CommunityEventsApp: App {
                 NavigationView {
                     MapView()
                 }
+                .navigationViewStyle(.stack)
                 .tabItem {
                     Image(systemName: "mappin.circle.fill")
                     Text("Discover events")
@@ -37,6 +39,7 @@ struct CommunityEventsApp: App {
                 NavigationView {
                     ContentView(event: event, viewModel: viewModel);
                 }
+                .navigationViewStyle(.stack)
                 .tabItem {
                     Image(systemName: "info.circle.fill")
                     Text("Information")
@@ -44,6 +47,7 @@ struct CommunityEventsApp: App {
                 NavigationView {
                     SubmissionsView()
                 }
+                .navigationViewStyle(.stack)
                 .tabItem {
                     Image(systemName: "highlighter")
                     Text("Submit")

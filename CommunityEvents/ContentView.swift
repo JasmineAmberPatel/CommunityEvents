@@ -54,15 +54,6 @@ struct ContentView: View {
                     }
                 }
                 .font(.body)
-                .onAppear {
-                    Task {
-                        do {
-                            try await viewModel.getEvents()
-                        } catch {
-                            print("Error", error)
-                        }
-                    }
-                }
             }
             .navigationTitle("Event Information")
         }
