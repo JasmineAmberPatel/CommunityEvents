@@ -8,17 +8,17 @@ import SwiftUI
 
 struct Event: Decodable, Identifiable {
     
-    let id: String
-    let title: String
-    let date: String
-    let time: String
-    let location: String
-    let latitude: Double
-    let longitude: Double
-    let price: Double
-    let description: String
-    let link: String?
-    let imageUrl: String
+    var id: String
+    var title: String
+    var date: String
+    var time: String
+    var location: String
+    var latitude: Double
+    var longitude: Double
+    var price: Double
+    var description: String
+    var link: String?
+    var imageUrl: String
     
     init(id: String,
          title: String,
@@ -31,17 +31,17 @@ struct Event: Decodable, Identifiable {
          description: String,
          link: String,
          imageUrl: String) {
-        self.id = id
-        self.title = title
-        self.date = date
-        self.time = time
-        self.location = location
-        self.latitude = latitude
-        self.longitude = longitude
-        self.price = price
-        self.description = description
-        self.link = link
-        self.imageUrl = imageUrl
+        self.id = ""
+        self.title = "event title"
+        self.date = "event date"
+        self.time = "event time"
+        self.location = "event location"
+        self.latitude = 0.0
+        self.longitude = 0.0
+        self.price = 0.0
+        self.description = "event description"
+        self.link = "event link"
+        self.imageUrl = "image url"
     }
     
     static let example = Event(id: "629f3ec51c11eb1825ef27e5",

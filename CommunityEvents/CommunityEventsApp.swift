@@ -12,6 +12,11 @@ struct CommunityEventsApp: App {
     @StateObject var viewModel: ContentViewModel
     var event: Event
     
+    init() {
+        _viewModel = StateObject(wrappedValue: ContentViewModel())
+        event = Event(id: "", title: "", date: "", time: "", location: "", latitude: 0.0, longitude: 0.0, price: 0.0, description: "", link: "", imageUrl: "")
+    }
+    
     var body: some Scene {
         WindowGroup {
             TabView {

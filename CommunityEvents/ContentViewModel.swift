@@ -9,12 +9,9 @@ import SwiftUI
 
 class ContentViewModel: ObservableObject {
     
-    var eventsList: [Event]
-    var primary: Event
-    
-    init() {
-        self.eventsList = []
-        self.primary = eventsList[0]
+    var eventsList: [Event] = []
+    var primary: Event {
+        eventsList[0]
     }
     
     func getEvents() async throws {
