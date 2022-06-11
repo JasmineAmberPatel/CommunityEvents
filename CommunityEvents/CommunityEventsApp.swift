@@ -39,15 +39,6 @@ struct CommunityEventsApp: App {
                     Text("Discover events")
                 }
                 NavigationView {
-                    ContentView(event: event, viewModel: viewModel);
-                }
-                .navigationViewStyle(.stack)
-                .tabItem {
-                    Image(systemName: "info.circle.fill")
-                        .foregroundColor(Color(.ceOrange))
-                    Text("Information")
-                }
-                NavigationView {
                     SubmissionsView()
                 }
                 .navigationViewStyle(.stack)
