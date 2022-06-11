@@ -26,6 +26,7 @@ struct CommunityEventsApp: App {
                 .navigationViewStyle(.stack)
                 .tabItem {
                     Image(systemName: "house.fill")
+                        .foregroundColor(Color(.ceOrange))
                     Text("About")
                 }
                 NavigationView {
@@ -34,6 +35,7 @@ struct CommunityEventsApp: App {
                 .navigationViewStyle(.stack)
                 .tabItem {
                     Image(systemName: "mappin.circle.fill")
+                        .foregroundColor(Color(.ceOrange))
                     Text("Discover events")
                 }
                 NavigationView {
@@ -42,6 +44,7 @@ struct CommunityEventsApp: App {
                 .navigationViewStyle(.stack)
                 .tabItem {
                     Image(systemName: "info.circle.fill")
+                        .foregroundColor(Color(.ceOrange))
                     Text("Information")
                 }
                 NavigationView {
@@ -50,6 +53,7 @@ struct CommunityEventsApp: App {
                 .navigationViewStyle(.stack)
                 .tabItem {
                     Image(systemName: "highlighter")
+                        .foregroundColor(Color(.ceOrange))
                     Text("Submit")
                 }
             }
