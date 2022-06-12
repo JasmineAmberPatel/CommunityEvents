@@ -32,16 +32,16 @@ struct Event: Decodable, Identifiable {
          link: String,
          imageUrl: String) {
         self.id = ""
-        self.title = "event title"
-        self.date = "event date"
-        self.time = "event time"
-        self.location = "event location"
-        self.latitude = 0.0
-        self.longitude = 0.0
-        self.price = 0.0
-        self.description = "event description"
-        self.link = "event link"
-        self.imageUrl = "image url"
+        self.title = "Visit Santa's House"
+        self.date = "25/12/22"
+        self.time = "11:00 - 16:00"
+        self.location = "Santa Claus Village"
+        self.latitude = 66.543701
+        self.longitude = 25.844311
+        self.price = 0.00
+        self.description = "Have a magical time with Santa."
+        self.link = "https://santaclausvillage.info/"
+        self.imageUrl = "https://unsplash.com/photos/liT5AlTmC8I"
     }
     
     static let example = Event(id: "629f3ec51c11eb1825ef27e5",
