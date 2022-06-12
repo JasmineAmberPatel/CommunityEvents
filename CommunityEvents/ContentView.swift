@@ -8,7 +8,7 @@
 import SwiftUI
 
 struct ContentView: View {
-    let event: Event
+    var event: Event
     let viewModel: ContentViewModel
     
     var body: some View {
@@ -50,7 +50,7 @@ struct ContentView: View {
                         Image(systemName: "sterlingsign.circle.fill")
                             .foregroundColor(.ceOrange)
                             .padding(.bottom, 10)
-                        Text(String(format: "£%.2f", event.price))
+                        Text(event.price == 0.0 ? "Free" : String(format: "£%.2f", event.price))
                             .font(.headline)
                             .padding(.bottom, 10)
                     }
@@ -64,8 +64,7 @@ struct ContentView: View {
                 .font(.body)
             }
             .padding()
-            .background(Color(.systemGroupedBackground))
-            .navigationBarHidden(true)
+            .navigationTitle("Event Information")
         }
     }
 }
