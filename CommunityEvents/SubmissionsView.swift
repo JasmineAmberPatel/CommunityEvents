@@ -9,6 +9,7 @@ import SwiftUI
 
 struct SubmissionsView: View {
     let event: Event
+    let viewModel = submissionsViewModel(event: Event(id: "", title: "", date: "", time: "", location: "", latitude: 0.0, longitude: 0.0, price: 0.0, description: "", link: "", imageUrl: ""))
     
     @State var title: String = ""
     @State var date: String = ""
@@ -20,6 +21,10 @@ struct SubmissionsView: View {
     @State var description: String = ""
     @State var link: String = ""
     @State var imageUrl: String = ""
+    
+    var disableForm: Bool {
+        title.count < 2 || date.isEmpty || time.isEmpty || location.isEmpty || latitude.isZero || latitude.isNaN || longitude.isZero || longitude.isNaN || price.isNaN || description.count < 2 || link.isEmpty || imageUrl.isEmpty
+    }
     
     var body: some View {
         VStack(alignment: .leading, spacing: 0) {
@@ -98,22 +103,24 @@ struct SubmissionsView: View {
                 }
                 Section {
                     Button(action: {
-                        print("submit form here")
+                        Task {
+                            await viewModel.postEvent()
+                        }
                     }) {
                         Text("Submit")
                     }
                 }
-                .foregroundColor(Color.ceOrange)
+                .disabled(disableForm)
                 .font(.headline)
                 .multilineTextAlignment(.center)
             }
         }
         .navigationBarHidden(true)
     }
-    
-    struct SubmissionsView_Previews: PreviewProvider {
-        static var previews: some View {
-            SubmissionsView(event: Event.example)
-        }
+}
+
+struct SubmissionsView_Previews: PreviewProvider {
+    static var previews: some View {
+        SubmissionsView(event: Event.example)
     }
 }

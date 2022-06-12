@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct Event: Decodable, Identifiable {
+struct Event: Decodable, Encodable, Identifiable {
     
     var id: String
     var title: String
@@ -46,7 +46,7 @@ struct Event: Decodable, Identifiable {
     
     static let example = Event(id: "629f3ec51c11eb1825ef27e5",
                                title: "Visit Santa's House",
-                               date: "Visit Santa's House",
+                               date: "25/12/22",
                                time: "11:00 - 16:00",
                                location: "Santa Claus Village",
                                latitude: 66.543701,
