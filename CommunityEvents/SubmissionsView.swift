@@ -22,12 +22,12 @@ struct SubmissionsView: View {
     @State var imageUrl: String = ""
     
     var body: some View {
-        VStack(spacing: 0) {
+        VStack(alignment: .leading, spacing: 0) {
             Group {
                 Text("Event Submissions")
-                    .font(.title)
+                    .font(.largeTitle)
                     .bold()
-                    .padding([.top, .bottom], 10)
+                    .padding(20)
                 Text("Please enter the details for your upcoming community event following the examples given below. We ask for the event latitude and longitude to allow us to show your event on our interactive map. If you are unsure about your events latitude and longitude you can enter your event postcode here: https://www.latlong.net/")
                     .font(.caption)
                     .padding([.leading, .trailing], 20)

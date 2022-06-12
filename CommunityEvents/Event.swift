@@ -46,7 +46,7 @@ struct Event: Decodable, Identifiable {
     
     static let example = Event(id: "629f3ec51c11eb1825ef27e5",
                                title: "Visit Santa's House",
-                               date: "25/12/22",
+                               date: "Visit Santa's House",
                                time: "11:00 - 16:00",
                                location: "Santa Claus Village",
                                latitude: 66.543701,

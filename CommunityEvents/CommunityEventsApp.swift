@@ -25,8 +25,7 @@ struct CommunityEventsApp: App {
                 }
                 .navigationViewStyle(.stack)
                 .tabItem {
-                    Image(systemName: "house.fill")
-                        .foregroundColor(Color(.ceOrange))
+                    Image(systemName: "house.fill").renderingMode(.template)
                     Text("About")
                 }
                 NavigationView {
@@ -34,20 +33,19 @@ struct CommunityEventsApp: App {
                 }
                 .navigationViewStyle(.stack)
                 .tabItem {
-                    Image(systemName: "mappin.circle.fill")
-                        .foregroundColor(Color(.ceOrange))
-                    Text("Discover events")
+                    Image(systemName: "mappin.circle.fill").renderingMode(.template)
+                    Text("Discover")
                 }
                 NavigationView {
-                    SubmissionsView()
+                    SubmissionsView(event: event)
                 }
                 .navigationViewStyle(.stack)
                 .tabItem {
-                    Image(systemName: "highlighter")
-                        .foregroundColor(Color(.ceOrange))
+                    Image(systemName: "highlighter").renderingMode(.template)
                     Text("Submit")
                 }
             }
+            .accentColor(.ceOrange)
             .environmentObject(viewModel)
         }
     }

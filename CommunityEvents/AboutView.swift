@@ -12,8 +12,15 @@ struct AboutView: View {
     
     var body: some View {
         VStack {
-            Text("Hello, World!")
+            Text("Welcome!")
+                .font(.largeTitle)
+                .bold()
+                .padding(20)
+            Text("Discover community events near you.")
         }
+        .frame(maxWidth: .infinity, maxHeight: .infinity) // 1
+        .accentColor(Color.black)
+        .background(Color.ceOrange)
         .onAppear {
             Task {
                 do {
@@ -23,7 +30,6 @@ struct AboutView: View {
                 }
             }
         }
-        .navigationTitle("About Us")
     }
 }
 
