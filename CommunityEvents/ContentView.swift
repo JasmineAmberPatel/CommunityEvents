@@ -14,13 +14,13 @@ struct ContentView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                    AsyncImage(url: URL(string: event.imageUrl)) { image in
-                        image.resizable()
-                    } placeholder: {
-                        Color.ceOrange
-                    }
-                    .frame(width: 360, height: 200)
-                    .clipShape(RoundedRectangle(cornerRadius: 25))
+                AsyncImage(url: URL(string: event.imageUrl)) { image in
+                    image.resizable()
+                } placeholder: {
+                    Color.ceOrange
+                }
+                .frame(width: 360, height: 200)
+                .clipShape(RoundedRectangle(cornerRadius: 25))
                 Group {
                     Text(event.title)
                         .font(.title)
@@ -29,6 +29,7 @@ struct ContentView: View {
                     Divider()
                     HStack(alignment: .center)  {
                         Image(systemName: "calendar")
+                            .foregroundColor(.ceOrange)
                         Text("Date and Time")
                             .font(.headline)
                     }
@@ -36,6 +37,7 @@ struct ContentView: View {
                         .padding(.bottom, 10)
                     HStack(alignment: .center)  {
                         Image(systemName: "pin.fill")
+                            .foregroundColor(.ceOrange)
                         Text("Location")
                             .font(.headline)
                     }
@@ -46,6 +48,7 @@ struct ContentView: View {
                         .padding(.bottom, 10)
                     HStack(alignment: .center)  {
                         Image(systemName: "sterlingsign.circle.fill")
+                            .foregroundColor(.ceOrange)
                             .padding(.bottom, 10)
                         Text(String(format: "£%.2f", event.price))
                             .font(.headline)
@@ -53,14 +56,16 @@ struct ContentView: View {
                     }
                     HStack(alignment: .center) {
                         Image(systemName: "link")
-                        Text("More Information")
+                            .foregroundColor(.ceOrange)
+                        Link("More information", destination: URL(string: event.link ?? "no link available")!)
                             .font(.headline)
                     }
                 }
                 .font(.body)
             }
             .padding()
-            .navigationTitle("Event Information")
+            .background(Color(.systemGroupedBackground))
+            .navigationBarHidden(true)
         }
     }
 }
