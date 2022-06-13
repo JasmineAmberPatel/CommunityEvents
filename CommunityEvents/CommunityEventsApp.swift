@@ -11,10 +11,12 @@ import SwiftUI
 struct CommunityEventsApp: App {
     @StateObject var viewModel: ContentViewModel
     var event: Event
+    var eventSubmission: EventSubmission
     
     init() {
         _viewModel = StateObject(wrappedValue: ContentViewModel())
         event = Event(id: "", title: "", date: "", time: "", location: "", latitude: 0.0, longitude: 0.0, price: 0.0, description: "", link: "", imageUrl: "")
+        eventSubmission = EventSubmission()
     }
     
     var body: some Scene {
@@ -37,7 +39,7 @@ struct CommunityEventsApp: App {
                     Text("Discover")
                 }
                 NavigationView {
-                    SubmissionsView(event: event)
+                    SubmissionsView(eventSubmission: eventSubmission, event: event)
                 }
                 .navigationViewStyle(.stack)
                 .tabItem {

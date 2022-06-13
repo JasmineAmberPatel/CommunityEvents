@@ -8,18 +8,16 @@
 import SwiftUI
 
 struct submissionsViewModel {
-    
+
     var event: Event
-    
-    @State var confirmationMessage = ""
-    @State var showingConfirmation = false
-    
+    @ObservedObject var eventSubmission: EventSubmission
+
     func postEvent() async {
-        guard let encoded = try? JSONEncoder().encode(event) else {
-            print("Failed to encode event")
+        guard let encoded = try? JSONEncoder().encode(eventSubmission) else {
+            print(event, "Failed to encode event")
             return
         }
-        
+
         let url = URL(string: "http://localhost:5172/events")!
         var request = URLRequest(url: url)
         request.setValue("application/json", forHTTPHeaderField: "Content-Type")
@@ -27,8 +25,7 @@ struct submissionsViewModel {
         do {
             let (data, _) = try await URLSession.shared.upload(for: request, from: encoded)
             let decodedEvent = try JSONDecoder().decode(Event.self, from: data)
-            confirmationMessage = "Your event \(decodedEvent.title) has been submitted. Refresh the map to see your event."
-            showingConfirmation = true
+            print(decodedEvent)
         } catch {
             print(error, "Event submission failed.")
         }

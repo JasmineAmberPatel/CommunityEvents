@@ -6,7 +6,7 @@
 //
 import SwiftUI
 
-struct Event: Decodable, Encodable, Identifiable {
+class Event: Decodable, Encodable, Identifiable {
     
     var id: String?
     var title: String
