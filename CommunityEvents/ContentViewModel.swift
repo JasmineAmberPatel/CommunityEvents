@@ -1,8 +1,8 @@
 //
-//  ContentViewModel.swift
+//  ContentsViewModel.swift
 //  CommunityEvents
 //
-//  Created by Jasmine Patel on 10/06/2022.
+//  Created by Jasmine Patel on 13/06/2022.
 //
 
 import SwiftUI
