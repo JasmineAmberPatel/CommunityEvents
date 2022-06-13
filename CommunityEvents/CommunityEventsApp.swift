@@ -44,7 +44,7 @@ struct CommunityEventsApp: App {
                 .navigationViewStyle(.stack)
                 .tabItem {
                     Image(systemName: "highlighter").renderingMode(.template)
-                    Text("Submit")
+                    Text("Submit Event")
                 }
             }
             .accentColor(.ceOrange)

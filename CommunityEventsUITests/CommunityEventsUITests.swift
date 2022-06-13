@@ -6,30 +6,47 @@
 //
 
 import XCTest
+@testable import CommunityEvents
 
 class CommunityEventsUITests: XCTestCase {
+    var app: XCUIApplication!
+    var sut: CommunityEventsApp!
 
     override func setUpWithError() throws {
-        // Put setup code here. This method is called before the invocation of each test method in the class.
-
-        // In UI tests it is usually best to stop immediately when a failure occurs.
+        try super.setUpWithError()
         continueAfterFailure = false
-
-        // In UI tests it’s important to set the initial state - such as interface orientation - required for your tests before they run. The setUp method is a good place to do this.
-    }
-
-    override func tearDownWithError() throws {
-        // Put teardown code here. This method is called after the invocation of each test method in the class.
-    }
-
-    func testExample() throws {
-        // UI tests must launch the application that they test.
-        let app = XCUIApplication()
+        app = XCUIApplication()
         app.launch()
-
-        // Use XCTAssert and related functions to verify your tests produce the correct results.
     }
 
+    func testAssertWelcomeViewIsDisplayedAndNavigatesToMapViewOnButtonPress() {
+        let welcomeTitle = app.staticTexts["Discover community events near you"]
+        let exploreButton = XCUIApplication().buttons["Explore"]
+        let mapViewLabel = app.staticTexts["Events Near You"]
+        
+        XCTAssertTrue(welcomeTitle.exists)
+        XCTAssertTrue(exploreButton.exists)
+        
+        exploreButton.tap()
+        
+        if exploreButton.isSelected {
+            XCTAssertTrue(mapViewLabel.exists)
+        }
+    }
+    
+    func testSelectingSubmitNavigationButtonNavigatesToEventSubmissionView() {
+        let submitNavigationButton = app.tabBars.buttons["Submit Event"]
+        let submissionViewTitle = app.staticTexts["Event Submissions"]
+        
+        XCTAssertTrue(submitNavigationButton.exists)
+        
+        submitNavigationButton.tap()
+                
+        if submitNavigationButton.isSelected {
+            XCTAssertTrue(submissionViewTitle.exists)
+        }
+    }
+    
     func testLaunchPerformance() throws {
         if #available(macOS 10.15, iOS 13.0, tvOS 13.0, watchOS 7.0, *) {
             // This measures how long it takes to launch your application.

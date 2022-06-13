@@ -6,6 +6,7 @@
 //
 
 import XCTest
+@testable import CommunityEvents
 
 class CommunityEventsUITestsLaunchTests: XCTestCase {
 
