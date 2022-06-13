@@ -8,7 +8,7 @@ import SwiftUI
 
 struct Event: Decodable, Encodable, Identifiable {
     
-    var id: String
+    var id: String?
     var title: String
     var date: String
     var time: String
@@ -18,7 +18,7 @@ struct Event: Decodable, Encodable, Identifiable {
     var price: Double
     var description: String
     var link: String?
-    var imageUrl: String
+    var imageUrl: String?
     
     init(id: String,
          title: String,

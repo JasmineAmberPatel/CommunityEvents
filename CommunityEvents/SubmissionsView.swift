@@ -23,7 +23,7 @@ struct SubmissionsView: View {
     @State var imageUrl: String = ""
     
     var disableForm: Bool {
-        title.count < 2 || date.isEmpty || time.isEmpty || location.isEmpty || latitude.isZero || latitude.isNaN || longitude.isZero || longitude.isNaN || price.isNaN || description.count < 2 || link.isEmpty || imageUrl.isEmpty
+        title.count < 2 || date.isEmpty || time.isEmpty || location.isEmpty || latitude.isZero || latitude.isNaN || longitude.isZero || longitude.isNaN || price.isNaN || description.count < 2
     }
     
     var body: some View {
@@ -97,12 +97,13 @@ struct SubmissionsView: View {
                     HStack {
                         Text("Image Url:")
                             .font(.headline)
-                        TextField(Event.example.imageUrl, text: $imageUrl)
+                        TextField(Event.example.imageUrl ?? "https://unsplash.com/photos/xSiQBSq", text: $imageUrl)
                             .foregroundColor(.ceOrange)
                     }
                 }
                 Section {
                     Button(action: {
+                        print()
                         Task {
                             await viewModel.postEvent()
                         }

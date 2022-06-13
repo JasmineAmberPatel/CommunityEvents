@@ -14,10 +14,10 @@ struct ContentView: View {
     var body: some View {
         ScrollView {
             VStack(alignment: .leading) {
-                AsyncImage(url: URL(string: event.imageUrl)) { image in
+                AsyncImage(url: URL(string: event.imageUrl ?? "no image")) { image in
                     image.resizable()
                 } placeholder: {
-                    Color.ceOrange
+                    Image("Community-Events")
                 }
                 .frame(width: 360, height: 200)
                 .clipShape(RoundedRectangle(cornerRadius: 25))

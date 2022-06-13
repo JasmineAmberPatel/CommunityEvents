@@ -20,6 +20,8 @@
 		53330C502852951D0058025C /* UIColor.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53330C4F2852951D0058025C /* UIColor.swift */; };
 		53330C5228529F880058025C /* AboutView.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53330C5128529F880058025C /* AboutView.swift */; };
 		53330C54285342D10058025C /* ContentViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53330C53285342D00058025C /* ContentViewModel.swift */; };
+		53716F582855494500799B8B /* Community-Events.png in Resources */ = {isa = PBXBuildFile; fileRef = 53716F572855494400799B8B /* Community-Events.png */; };
+		53716F5A28565DEC00799B8B /* SubmissionsViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 53716F5928565DEC00799B8B /* SubmissionsViewModel.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -56,6 +58,8 @@
 		53330C4F2852951D0058025C /* UIColor.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UIColor.swift; sourceTree = "<group>"; };
 		53330C5128529F880058025C /* AboutView.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AboutView.swift; sourceTree = "<group>"; };
 		53330C53285342D00058025C /* ContentViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ContentViewModel.swift; sourceTree = "<group>"; };
+		53716F572855494400799B8B /* Community-Events.png */ = {isa = PBXFileReference; lastKnownFileType = image.png; path = "Community-Events.png"; sourceTree = "<group>"; };
+		53716F5928565DEC00799B8B /* SubmissionsViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = SubmissionsViewModel.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,7 +117,9 @@
 				53330C45285228580058025C /* MapView.swift */,
 				53330C4328520E880058025C /* Event.swift */,
 				53330C4B285247AE0058025C /* SubmissionsView.swift */,
+				53716F5928565DEC00799B8B /* SubmissionsViewModel.swift */,
 				53330C1B28520BF00058025C /* Assets.xcassets */,
+				53716F572855494400799B8B /* Community-Events.png */,
 				53330C4F2852951D0058025C /* UIColor.swift */,
 				53330C1D28520BF00058025C /* Preview Content */,
 			);
@@ -250,6 +256,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				53330C1F28520BF00058025C /* Preview Assets.xcassets in Resources */,
+				53716F582855494500799B8B /* Community-Events.png in Resources */,
 				53330C1C28520BF00058025C /* Assets.xcassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -277,6 +284,7 @@
 			files = (
 				53330C4428520E880058025C /* Event.swift in Sources */,
 				53330C4C285247AE0058025C /* SubmissionsView.swift in Sources */,
+				53716F5A28565DEC00799B8B /* SubmissionsViewModel.swift in Sources */,
 				53330C1A28520BEF0058025C /* ContentView.swift in Sources */,
 				53330C54285342D10058025C /* ContentViewModel.swift in Sources */,
 				53330C46285228580058025C /* MapView.swift in Sources */,

@@ -21,7 +21,7 @@ struct CommunityEventsApp: App {
         WindowGroup {
             TabView {
                 NavigationView {
-                    AboutView(viewModel: viewModel)
+                    WelcomeView(viewModel: viewModel)
                 }
                 .navigationViewStyle(.stack)
                 .tabItem {

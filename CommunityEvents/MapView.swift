@@ -25,6 +25,7 @@ struct MapView: View {
                         Image(systemName: "pin.fill")
                             .foregroundColor(Color(.ceOrange))
                             .font(.system(size: 20))
+                            .shadow(radius: 5)
                     }
                 }
             }
