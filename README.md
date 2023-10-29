@@ -20,6 +20,6 @@ The App is tested using: XCTest
 3. Once the API is running you can open the app project in Xcode, ensure the api urls match the localhost url the API is using.
 4. Build and run the application on your preferred simulator or physical device.
 
-## App Demonstration:
+## App Demonstration video:
 
 https://drive.google.com/file/d/1gcZaFeWNEPL44Z2ZhIlwCBgUzoiPWwBL/view?usp=sharing
